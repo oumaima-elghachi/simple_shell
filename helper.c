@@ -59,3 +59,16 @@ char *get_pid(void)
 	close(file);
 	return (buffer);
 }
+
+/**
+ * get_env_value - Gets the value corresponding to an environmental variable.
+ * @beginning: The environmental variable to search for.
+ * @len: The length of the environmental variable to search for.
+ *
+ * Return: If the variable is not found - an empty string.
+ *         Otherwise - the value of the environmental variable.
+ *
+ * Description: Variables are stored in the format VARIABLE=VALUE.
+ */
+char *get_env_value(char *beginning, int len)
+{
