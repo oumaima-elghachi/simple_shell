@@ -31,3 +31,12 @@ int shellby_setenv(char **args, char __attribute__((__unused__)) **front)
 		*env_var = new_value;
 		return (0);
 	}
+	for (size = 0; environ[size]; size++)
+		;
+
+	new_environ = malloc(sizeof(char *) * (size + 2));
+	if (!new_environ)
+	{
+		free(new_value);
+		return (create_error(args, -1));
+	}
