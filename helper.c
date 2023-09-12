@@ -132,4 +132,27 @@ void variable_replacement(char **line, int *exe_ret)
 				for (k = j + 1; old_line[k] &&
 						old_line[k] != '$' &&
 						old_line[k] != ' '; k++)
-					;
+					 ;
+				len = k - (j + 1);
+				replacement = get_env_value(&old_line[j + 1], len);
+			}
+			new_line = malloc(j + _strlen(replacement)
+					  + _strlen(&old_line[k]) + 1);
+			if (!line)
+				return;
+			new_line[0] = '\0';
+			_strncat(new_line, old_line, j);
+			if (replacement)
+			{
+				_strcat(new_line, replacement);
+				free(replacement);
+				replacement = NULL;
+			}
+			_strcat(new_line, &old_line[k]);
+			free(old_line);
+			*line = new_line;
+			old_line = new_line;
+			j = -1;
+		}
+	}
+}
