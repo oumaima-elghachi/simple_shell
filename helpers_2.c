@@ -2,7 +2,7 @@
  * File: helpers_2.c
  *
  */
-g
+
 #include "shell.h"
 
 void handle_line(char **line, ssize_t read);
