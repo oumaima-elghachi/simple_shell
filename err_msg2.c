@@ -8,7 +8,7 @@ char *error_127(char **args)
 {
 	char *error, *hist_str;
 	int len;
-
+h
 	hist_str = _itoa(hist);
 	if (!hist_str)
 		return (NULL);
