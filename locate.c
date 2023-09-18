@@ -2,7 +2,7 @@
  * File: locate.c
  *
  */
-kjh
+j
 #include "shell.h"
 
 char *fill_path_dir(char *path);
