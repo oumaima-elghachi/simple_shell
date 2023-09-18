@@ -1,3 +1,14 @@
+/*
+ * File: env_builtins.c
+ *
+ */
+
+#include "shell.h"
+
+int shellby_env(char **args, char __attribute__((__unused__)) **front);
+int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
+
 /**
  * shellby_setenv - Changes or adds an environmental variable to the PATH.
  * @args: An array of arguments passed to the shell.
