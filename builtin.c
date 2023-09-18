@@ -1,4 +1,13 @@
-int shellby_exit(char **args, char **front)
+/*
+ * File: builtin.c
+ *
+ */
+
+#include "shell.h"
+int (*get_builtin(char *command))(char **args, char **front);
+int shellby_exit(char **args, char **front);
+int shellby_cd(char **args, char __attribute__((__unused__)) **front);
+int shellby_help(char **args, char __attribute__((__unused__)) **front);int shellby_exit(char **args, char **front)
 {
 	int i = 0, len_of_int = 10;
 	unsigned int num = 0, max = 1 << (sizeof(int) * 8 - 1);
