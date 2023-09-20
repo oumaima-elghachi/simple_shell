@@ -12,6 +12,6 @@ To invoke simple_shell, compile all .c files in the repository and run the resul
 gcc *.c -o simple_shell
 ./simple_shell
 📘 Authors
-Amksa Abdelaaziz - @amxsupport
 
-Chouqar Ottman - @Otmanbboy
+
+oumaima el ghachi
