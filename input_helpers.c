@@ -2,7 +2,7 @@
  * File: input_helpers.c
  *
  */
-F
+
 #include "shell.h"
 
 char *get_args(char *line, int *exe_ret);
@@ -90,9 +90,7 @@ int call_args(char **args, char **front, int *exe_ret)
 			{
 				args = &args[++index];
 				index = 0;
-	
-	        
-	        	}
+			}
 			else
 			{
 				for (index++; args[index]; index++)
@@ -214,4 +212,3 @@ int check_args(char **args)
 	}
 	return (0);
 }
-
