@@ -80,7 +80,11 @@ int shellby_setenv(char **args, char __attribute__((__unused__)) **front)
 		free(new_value);
 		return (create_error(args, -1));
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> cec0f8a (update)
 	for (index = 0; environ[index]; index++)
 		new_environ[index] = environ[index];
 
@@ -136,4 +140,7 @@ int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front)
 
 	return (0);
 }
+<<<<<<< HEAD
 	
+=======
+>>>>>>> cec0f8a (update)
